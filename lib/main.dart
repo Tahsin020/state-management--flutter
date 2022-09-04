@@ -6,6 +6,8 @@ import 'package:provider/provider.dart';
 import 'package:state_managements_in_life/product/model/state/project_context.dart';
 import 'package:state_managements_in_life/product/model/state/user_context.dart';
 
+import 'feature/maps/view/map_select_view.dart';
+
 void main() => runApp(const MyApp());
 
 class MyApp extends StatelessWidget {
@@ -27,9 +29,9 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'State Management in life',
-        home: const LoginView(),
+        home: MapSelectView(),
         theme: ThemeData.light().copyWith(
-            appBarTheme: AppBarTheme(
+            appBarTheme: const AppBarTheme(
                 backgroundColor: Colors.transparent, systemOverlayStyle: SystemUiOverlayStyle.dark, elevation: 0),
             backgroundColor: Colors.grey[300],
             floatingActionButtonTheme: const FloatingActionButtonThemeData(
