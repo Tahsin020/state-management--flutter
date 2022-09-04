@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:state_managements_in_life/feature/login/view/login_view.dart';
-import 'package:state_managements_in_life/feature/onboard/on_board_view.dart';
 import 'package:provider/provider.dart';
+import 'package:state_managements_in_life/feature/travel/view/travel_tab_view.dart';
 import 'package:state_managements_in_life/product/model/state/project_context.dart';
 import 'package:state_managements_in_life/product/model/state/user_context.dart';
-
-import 'feature/maps/view/map_select_view.dart';
 
 void main() => runApp(const MyApp());
 
@@ -29,8 +26,14 @@ class MyApp extends StatelessWidget {
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'State Management in life',
-        home: MapSelectView(),
+        home: const TravelTabView(),
         theme: ThemeData.light().copyWith(
+            tabBarTheme: TabBarTheme(
+              indicatorSize: TabBarIndicatorSize.label,
+              indicator: const BoxDecoration(),
+              labelColor: Colors.orange,
+              unselectedLabelColor: Colors.grey.withOpacity(0.3),
+            ),
             appBarTheme: const AppBarTheme(
                 backgroundColor: Colors.transparent, systemOverlayStyle: SystemUiOverlayStyle.dark, elevation: 0),
             backgroundColor: Colors.grey[300],
